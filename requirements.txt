@@ -1,0 +1,6 @@
+numpy
+torch==2.7.0
+torchaudio==2.7.0
+soundfile
+huggingface-hub
+transformers==5.0.0

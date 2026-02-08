@@ -1,0 +1,274 @@
+{
+  "architectures": [
+    "MossAudioTokenizerModel"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_moss_audio_tokenizer.MossAudioTokenizerConfig",
+    "AutoModel": "modeling_moss_audio_tokenizer.MossAudioTokenizerModel"
+  },
+  "causal_transformer_context_duration": 10,
+  "code_dim": 768,
+  "decoder_kwargs": [
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 1280,
+      "dim_feedforward": 5120,
+      "gating": "none",
+      "input_dimension": 768,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 20,
+      "num_layers": 32,
+      "output_dimension": 1280,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 640,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 768,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 384,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 768,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 384,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 240,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 240
+    }
+  ],
+  "downsample_rate": 1920,
+  "dtype": "float32",
+  "encoder_kwargs": [
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 240
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 240,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 384,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 768,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 384,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 768,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 640,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 1280,
+      "dim_feedforward": 5120,
+      "gating": "none",
+      "input_dimension": 1280,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 20,
+      "num_layers": 32,
+      "output_dimension": 768,
+      "positional_embedding": "rope"
+    }
+  ],
+  "model_type": "speech_tokenizer",
+  "quantizer_kwargs": {
+    "codebook_dim": 8,
+    "codebook_size": 1024,
+    "input_dim": 768,
+    "num_quantizers": 32,
+    "output_dim": 768,
+    "quantizer_type": "rlfq",
+    "rvq_dim": 512
+  },
+  "quantizer_type": "rlfq",
+  "reversed_decoder_kwargs": [
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 240
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 240,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 384,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 768,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 384,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 768,
+      "dim_feedforward": 3072,
+      "gating": "none",
+      "input_dimension": 768,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 12,
+      "num_layers": 12,
+      "output_dimension": 640,
+      "positional_embedding": "rope"
+    },
+    {
+      "module_type": "PatchedPretransform",
+      "patch_size": 2
+    },
+    {
+      "causal": true,
+      "conv_layout": true,
+      "d_model": 1280,
+      "dim_feedforward": 5120,
+      "gating": "none",
+      "input_dimension": 1280,
+      "layer_scale": 0.01,
+      "max_period": 10000,
+      "module_type": "Transformer",
+      "norm": "layer_norm",
+      "num_heads": 20,
+      "num_layers": 32,
+      "output_dimension": 768,
+      "positional_embedding": "rope"
+    }
+  ],
+  "sample_rate": 24000,
+  "sampling_rate": 24000,
+  "transformers_version": "4.56.0.dev0",
+  "version": "4.26.1.a"
+}
