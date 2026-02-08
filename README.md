@@ -19,7 +19,21 @@
 </div>
 
 ## Introduction
-MOSS Audio Tokenizer is a unified audio tokenizer designed to achieve both high-fidelity reconstruction and semantically rich representations across speech, sound, and music. Built on the Cat (**C**ausal **A**udio **T**okenizer with **T**ransformer) architecture, the model scales to 1.6 billion parameters and was trained on 3 million hours of audio, surpassing previous open-source tokenizers in reconstruction quality across all bitrates. It processes 24 kHz audio at a low 12.5 Hz frame rate, with all components—including the encoder, quantizer, decoder, decoder-only LLM, and discriminator—optimized jointly in an end-to-end manner. Featuring a 32-layer residual vector quantizer (RVQ) with variable-bitrate support, it provides a scalable, native foundation for the next generation of autoregressive audio foundation models.
+**MOSS Audio Tokenizer** is a unified discrete audio tokenizer based on the **Cat** (**C**ausal **A**udio **T**okenizer with **T**ransformer) architecture. Scaling to 1.6 billion parameters, it serves as a unified discrete interface that reconciles high-fidelity acoustic details with deep semantic representations within a single token space.
+
+**Key Features:**
+
+*   **Extreme Compression & Variable Bitrate**: It compresses 24kHz raw audio into a remarkably low frame rate of 12.5Hz. Utilizing a 32-layer Residual Vector Quantizer (RVQ), it supports high-fidelity reconstruction across a wide range of bitrates, from 0.125kbps to 4kbps.
+*   **Pure Transformer Architecture**: The model features a "CNN-free" homogeneous architecture built entirely from Causal Transformer blocks. With 1.6B combined parameters (Encoder + Decoder), it ensures exceptional scalability and supports low-latency streaming inference.
+*   **Large-Scale General Audio Training**: Trained on 3 million hours of diverse audio data, the model excels at encoding and reconstructing all audio domains, including speech, sound effects, and music.
+*   **Unified Semantic-Acoustic Representation**: While achieving state-of-the-art reconstruction quality, Cat produces discrete tokens that are "semantic-rich," making them ideal for downstream tasks like speech understanding (ASR) and generation (TTS).
+*   **Fully Trained From Scratch**: Cat does not rely on any pretrained encoders (such as HuBERT or Whisper) or distillation from teacher models. All representations are learned autonomously from raw data.
+*   **End-to-End Joint Optimization**: All components—including the encoder, quantizer, decoder, discriminator, and a decoder-only LLM for semantic alignment—are optimized jointly in a single unified training pipeline.
+
+**Summary:**
+By combining a simple, scalable architecture with massive-scale data, the Cat architecture overcomes the bottlenecks of traditional audio tokenizers. It provides a robust, high-fidelity, and semantically grounded interface for the next generation of native audio foundation models.
+
+
 
 This repository is the official implementation of MossAudioTokenizer.
 
