@@ -4,12 +4,13 @@
 <img src="images/OpenMOSS_logo.png" alt="OpenMOSS Logo" width="300">
 <p>
 
-<img src="https://img.shields.io/badge/🔥-MossAudioTokenizer-red?style=for-the-badge" alt="MossAudioTokenizer"/>
-<img src="https://img.shields.io/badge/🧠-Semantic--aware-blue?style=for-the-badge" alt="Semantic-aware"/>
-<img src="https://img.shields.io/badge/🤖-Transformer-purple?style=for-the-badge" alt="Transformer"/>
-<img src="https://img.shields.io/badge/🗣️-Speech-green?style=for-the-badge" alt="Speech"/>
-<img src="https://img.shields.io/badge/🔊-Audio-orange?style=for-the-badge" alt="Audio"/>
-<img src="https://img.shields.io/badge/🎶-Music-pink?style=for-the-badge" alt="Music"/>
+<img src="https://img.shields.io/badge/MossAudio-Tokenizer-ee4c2c?style=flat&logo=soundcharts&logoColor=white" alt="MossAudioTokenizer"/>
+<img src="https://img.shields.io/badge/Semantic--aware-Logic-3776ab?style=flat&logo=probot&logoColor=white" alt="Semantic-aware"/>
+<img src="https://img.shields.io/badge/Transformer-Architecture-555555?style=flat&logo=micro-dot-blog&logoColor=white" alt="Transformer"/>
+<img src="https://img.shields.io/badge/Modal-Speech-e1b12c?style=flat&logo=google-assistant&logoColor=white" alt="Speech"/>
+<img src="https://img.shields.io/badge/Modal-Audio-4b8bbe?style=flat&logo=audiomack&logoColor=white" alt="Audio"/>
+<img src="https://img.shields.io/badge/Modal-Music-f39c12?style=flat&logo=apple-music&logoColor=white" alt="Music"/>
+
 
 <!-- TODO: replace the paper link to the arXiv link -->
 [![arXiv](https://img.shields.io/badge/arXiv-MOSSAudioTokenizer.svg)](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer.git)
