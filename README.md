@@ -14,7 +14,7 @@
 
 
 <!-- TODO: replace the paper link to the arXiv link -->
-[![arXiv](https://img.shields.io/badge/arXiv-MOSSAudioTokenizer-B31B1B?logo=arxiv&logoColor=white)](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer.git)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white)](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer.git)
 [![Hugging Face](https://img.shields.io/badge/🤗%20HuggingFace-MOSSAudioTokenizer-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776ab.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.7+-ee4c2c.svg)](https://pytorch.org/)
