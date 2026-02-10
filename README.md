@@ -78,7 +78,7 @@ This repository is the official implementation of Moss Audio Tokenizer.
 ### 🎵 Moss Audio Tokenizer
 | Model | Hugging Face | ModelScope |
 |:-----:|:---------------:|:----------:|
-| **Moss Audio Tokenizer** | [![HF](https://img.shields.io/badge/%20HuggingFace-MOSSAudioTokenizer-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
+| **Moss Audio Tokenizer** | [![HF](https://img.shields.io/badge/%20HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
 
 ### 🎵 Audio Generation Models Based On Moss Audio Tokenizer
 | Model | Hugging Face | ModelScope |
