@@ -48,7 +48,7 @@ This repository is the official implementation of Moss Audio Tokenizer.
 - [Introduction](#introduction)
 - [Release](#release)
 - [Model List](#model-list)
-  - [Moss Audio Tokenizer](#moss-audio-tokenizer)
+  - [MOSS Audio Tokenizer](#moss-audio-tokenizer)
   - [MOSS-TTS Family](#moss-tts-family)
 - [Installation](#installation)
 - [Usage](#usage)
