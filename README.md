@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-  <img src="./images/OpenMOSS_logo.png" height="70" align="middle" />
+  <img src="./images/OpenMOSS_Logo.png" height="70" align="middle" />
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="./images/mosi-logo.png" height="50" align="middle" />
 </p>
