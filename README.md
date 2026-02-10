@@ -1,28 +1,22 @@
 # MOSS Audio Tokenizer
-<div align="center">
+
 <br>
 
-<p align="center">
-  <img src="./images/OpenMOSS_Logo.png" height="70" align="middle" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./images/mosi-logo.png" height="50" align="middle" />
+<p align="center" style="display:flex; justify-content:center; align-items:center; gap:24px;">
+  <img src="./images/OpenMOSS_Logo.png" height="70" style="display:block;" />
+  <img src="./images/mosi-logo.png" height="50" style="display:block; transform: translateY(-6px);" />
 </p>
 
-
-<img src="https://img.shields.io/badge/MossAudio-Tokenizer-ee4c2c?style=flat&logo=soundcharts&logoColor=white" alt="MossAudioTokenizer"/>
-<img src="https://img.shields.io/badge/Semantic--aware-Logic-3776ab?style=flat&logo=probot&logoColor=white" alt="Semantic-aware"/>
-<img src="https://img.shields.io/badge/Transformer-Architecture-555555?style=flat&logo=micro-dot-blog&logoColor=white" alt="Transformer"/>
-<br>
-<img src="https://img.shields.io/badge/Modal-Speech-e1b12c?style=flat&logo=google-assistant&logoColor=white" alt="Speech"/>
-<img src="https://img.shields.io/badge/Modal-Audio-4b8bbe?style=flat&logo=audiomack&logoColor=white" alt="Audio"/>
-<img src="https://img.shields.io/badge/Modal-Music-f39c12?style=flat&logo=apple-music&logoColor=white" alt="Music"/>
-
-
-<!-- TODO: replace the paper link to the arXiv link -->
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white)](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer.git)
-[![Hugging Face](https://img.shields.io/badge/🤗%20HuggingFace-MOSSAudioTokenizer-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776ab.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.7+-ee4c2c.svg)](https://pytorch.org/)
+<div align="center">
+  <a href="https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer"><img src="https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface" alt="Hugging Face" /></a>
+  <a href="https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer"><img src="https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope" alt="ModelScope" /></a>
+  <a href="https://mosi.cn/#models"><img src="https://img.shields.io/badge/Blog-View-blue?logo=internet-explorer" alt="Blog" /></a>
+  <a href="https://github.com/OpenMOSS/MOSS-Audio-Tokenizer.git"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv" /></a>
+  <br>
+  <a href="https://github.com/OpenMOSS/MOSS-Audio-Tokenizer"><img src="https://img.shields.io/badge/GitHub-Repo-000000?logo=github" alt="GitHub" /></a>
+  <a href="https://x.com/Open_MOSS"><img src="https://img.shields.io/badge/Twitter-Follow-black?logo=x" alt="Twitter" /></a>
+  <a href="https://discord.gg/fvm5TaWjU3"><img src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord" alt="Discord" /></a>
+  <!-- TODO: replace the paper link to the arXiv link -->
 </div>
 
 ## Introduction
@@ -51,7 +45,7 @@ This repository is the official implementation of Moss Audio Tokenizer.
 </p>
 <br>
 
-## Qick Link
+## Quick Link
 * [Release](#release)
 * [Installation](#installation)
 * [Model List](#model-list)
@@ -64,7 +58,8 @@ This repository is the official implementation of Moss Audio Tokenizer.
 
 ## Release
 <!-- TODO: replace the paper link to the arXiv link -->
-- [2026/2/9] 🔥 We released code and checkpoints of Moss Audio Tokenizer. Checkout the [paper](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer.git) and [model_weights](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer).
+- [2026/2/10] 🎉 Released **MOSS-TTS Family**. See our [Blog](https://mosi.cn/#models) for details; models and docs are in the [MOSS-TTS repo](https://github.com/OpenMOSS/MOSS-TTS).
+- [2026/2/9] 🔥 We released code and checkpoints of Moss Audio Tokenizer. Checkout the [paper](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer.git), [Hugging Face weights](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer), and [ModelScope weights](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer).
 - [ ] 🚧 Evaluation scripts
 
 ## Installation
@@ -76,20 +71,23 @@ pip install -r requirements.txt
 ```
 
 ## Model List
+
+> For MOSS‑TTS Family models and docs, visit the GitHub repo: https://github.com/OpenMOSS/MOSS-TTS
+
 ### 🎵 Moss Audio Tokenizer
-| Model | 🤗 Hugging Face |
-|:-----:|:---------------:|
-| **🚀 Moss Audio Tokenizer** | [![HF](https://img.shields.io/badge/🤗%20HuggingFace-MOSSAudioTokenizer-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) |
+| Model | Hugging Face | ModelScope |
+|:-----:|:---------------:|:----------:|
+| **Moss Audio Tokenizer** | [![HF](https://img.shields.io/badge/%20HuggingFace-MOSSAudioTokenizer-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
 
 ### 🎵 Audio Generation Models Based On Moss Audio Tokenizer
-| Model | 🤗 Hugging Face |
-|:-----:|:---------------:|
-| **🚀 Moss-TTS** | [![HF](https://img.shields.io/badge/🤗%20HuggingFace-TTS-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS) |
-| **🚀 MOSS-TTS-Local-Transformer** | [![HF](https://img.shields.io/badge/🤗%20HuggingFace-TTS-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer) |
-| **🚀 Moss-TTSD** | [![HF](https://img.shields.io/badge/🤗%20HuggingFace-TTSD-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-TTSD-v1.0) |
-| **🚀 MOSS-TTS-Realtime** | [![HF](https://img.shields.io/badge/🤗%20HuggingFace-StreamingTTS-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Realtime) |
-| **🚀 MOSS-Voice-Generator** | [![HF](https://img.shields.io/badge/🤗%20HuggingFace-VoiceDesign-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-Voice-Generator) |
-| **🚀 MOSS-SoundEffect** | [![HF](https://img.shields.io/badge/🤗%20HuggingFace-SoundEffect-yellow)](https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect) |
+| Model | Hugging Face | ModelScope |
+|:-----:|:---------------:|:----------:|
+| **MOSS-TTS** | [![HF](https://img.shields.io/badge/%20HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTS) |
+| **MOSS-TTS-Local-Transformer** | [![HF](https://img.shields.io/badge/%20HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTS-Local-Transformer) |
+| **MOSS-TTSD** | [![HF](https://img.shields.io/badge/%20HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTSD-v1.0) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTSD-v1.0) |
+| **MOSS-TTS-Realtime** | [![HF](https://img.shields.io/badge/%20HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Realtime) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTS-Realtime) |
+| **MOSS-VoiceGenerator** | [![HF](https://img.shields.io/badge/%20HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-VoiceGenerator) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-VoiceGenerator) |
+| **MOSS-SoundEffect** | [![HF](https://img.shields.io/badge/%20HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-SoundEffect) |
 
 
 ## Usage
