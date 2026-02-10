@@ -1,8 +1,12 @@
-# Moss Audio Tokenizer
-<div align="center">
-<p>
-<img src="images/OpenMOSS_logo.png" alt="OpenMOSS Logo" width="300">
-<p>
+# MOSS Audio Tokenizer
+
+<br>
+
+<p align="center" style="display:flex; justify-content:center; align-items:center; gap:24px;">
+  <img src="./images/OpenMOSS_Logo.png" height="80" style="display:block; transform: translateY(0px);" />
+  <img src="./images/mosi-logo.png" height="50" style="display:block; transform: translateY(-8px);" />
+</p>
+
 
 <img src="https://img.shields.io/badge/MossAudio-Tokenizer-ee4c2c?style=flat&logo=soundcharts&logoColor=white" alt="MossAudioTokenizer"/>
 <img src="https://img.shields.io/badge/Semantic--aware-Logic-3776ab?style=flat&logo=probot&logoColor=white" alt="Semantic-aware"/>
