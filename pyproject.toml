@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moss-audio-tokenizer"
+version = "0.1.0"
+description = "MOSS Audio Tokenizer dependencies and utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "OpenMOSS Team" }
+]
+keywords = ["audio", "tokenizer", "transformers", "speech", "tts"]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy",
+  "torch==2.7.0",
+  "torchaudio==2.7.0",
+  "soundfile",
+  "huggingface-hub",
+  "transformers==5.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenMOSS/MOSS-Audio-Tokenizer"
+Documentation = "https://mosi.cn/#models"
+ModelScope = "https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer"
+HuggingFace = "https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer"
+
+[tool.setuptools]
+py-modules = []
