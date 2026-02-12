@@ -1,4 +1,4 @@
-# MOSS Audio Tokenizer
+# MOSS-Audio-Tokenizer
 
 <br>
 
@@ -20,7 +20,7 @@
 </div>
 
 ## Introduction
-This is the code for MOSS-Audio-Tokenizer presented in the [MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models](https://arxiv.org/abs/2602.10934). **MOSS Audio Tokenizer** is a unified discrete audio tokenizer based on the **Cat** (**C**ausal **A**udio **T**okenizer with **T**ransformer) architecture. Scaling to 1.6 billion parameters, it functions as a unified discrete interface, delivering both lossless-quality reconstruction and high-level semantic alignment.
+This is the code for MOSS-Audio-Tokenizer presented in the [MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models](https://arxiv.org/abs/2602.10934). **MOSS-Audio-Tokenizer** is a unified discrete audio tokenizer based on the **Cat** (**C**ausal **A**udio **T**okenizer with **T**ransformer) architecture. Scaling to 1.6 billion parameters, it functions as a unified discrete interface, delivering both lossless-quality reconstruction and high-level semantic alignment.
 
 **Key Features:**
 
@@ -36,12 +36,12 @@ By combining a simple, scalable architecture with massive-scale data, the Cat ar
 
 
 
-This repository is the official implementation of Moss Audio Tokenizer.
+This repository is the official implementation of MOSS-Audio-Tokenizer.
 
 <br>
 <p align="center">
     <img src="images/arch.png" width="95%"> <br>
-    Architecture of Moss Audio Tokenizer
+    Architecture of MOSS-Audio-Tokenizer
 </p>
 <br>
 
@@ -49,7 +49,7 @@ This repository is the official implementation of Moss Audio Tokenizer.
 - [Introduction](#introduction)
 - [Release](#release)
 - [Model List](#model-list)
-  - [MOSS Audio Tokenizer](#moss-audio-tokenizer)
+  - [MOSS-Audio-Tokenizer](#moss-audio-tokenizer)
   - [MOSS-TTS Family](#moss-tts-family)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -66,16 +66,16 @@ This repository is the official implementation of Moss Audio Tokenizer.
 ## Release
 - [2026/2/12] 🌟 We released the technical report: **MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models**. Read the [paper](https://arxiv.org/abs/2602.10934).
 - [2026/2/10] 🎉 Released **MOSS-TTS Family**. Please refer to our [blog](https://mosi.cn/#models) for details; models and docs can be found in the [MOSS-TTS GitHub repository](https://github.com/OpenMOSS/MOSS-TTS).
-- [2026/2/9] 🔥 We released code and checkpoints of Moss Audio Tokenizer. Check out the [GitHub repository](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer), [Hugging Face weights](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer), and [ModelScope weights](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer).
+- [2026/2/9] 🔥 We released code and checkpoints of MOSS-Audio-Tokenizer. Check out the [GitHub repository](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer), [Hugging Face weights](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer), and [ModelScope weights](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer).
 
 ## Model List
 
 > For MOSS‑TTS Family models and docs, visit the GitHub repo: https://github.com/OpenMOSS/MOSS-TTS
 
-### Moss Audio Tokenizer
+### MOSS-Audio-Tokenizer
 | Model | Hugging Face | ModelScope |
 |:-----:|:---------------:|:----------:|
-| **Moss Audio Tokenizer** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
+| **MOSS-Audio-Tokenizer** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
 
 ### MOSS-TTS Family
 | Model | Hugging Face | ModelScope |
@@ -171,7 +171,7 @@ python demo/test_reconstruction.py
 
 ## Evaluation Metrics
 
-The table below compares the reconstruction quality of open-source audio tokenizers with Moss Audio Tokenizer on speech and audio/music data.
+The table below compares the reconstruction quality of open-source audio tokenizers with MOSS-Audio-Tokenizer on speech and audio/music data.
 
 - Speech metrics are evaluated on LibriSpeech test-clean (English) and AISHELL-2 (Chinese), reported as EN/ZH.
 - Audio metrics are evaluated on the AudioSet evaluation subset, while music metrics are evaluated on MUSDB, reported as audio/music.
@@ -186,9 +186,9 @@ The table below compares the reconstruction quality of open-source audio tokeniz
 </p>
 <br>
 
-### LibriSpeech Speech Metrics (MOSS Audio Tokenizer vs. Open-source Tokenizers)
+### LibriSpeech Speech Metrics (MOSS-Audio-Tokenizer vs. Open-source Tokenizers)
 
-The plots below compare our MOSS Audio Tokenizer model with other open-source speech tokenizers on the LibriSpeech dataset, evaluated with SIM, STOI, PESQ-NB, and PESQ-WB (higher is better).
+The plots below compare our MOSS-Audio-Tokenizer model with other open-source speech tokenizers on the LibriSpeech dataset, evaluated with SIM, STOI, PESQ-NB, and PESQ-WB (higher is better).
 We control the bps of the same model by adjusting the number of RVQ codebooks used during inference.
 
 <br>
@@ -208,4 +208,4 @@ If you use this code or result in your paper, please cite our work as:
 
 ## License
 <!-- TODO: check and add license -->
-Moss Audio Tokenizer is released under the Apache 2.0 license.
+MOSS-Audio-Tokenizer is released under the Apache 2.0 license.
