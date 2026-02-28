@@ -217,3 +217,6 @@ If you use this code or result in your paper, please cite our work as:
 ## License
 <!-- TODO: check and add license -->
 MOSS-Audio-Tokenizer is released under the Apache 2.0 license.
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=OpenMOSS/MOSS-Audio-Tokenizer&type=date&legend=top-left)](https://www.star-history.com/#OpenMOSS/MOSS-Audio-Tokenizer&type=date&legend=top-left)
