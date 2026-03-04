@@ -64,6 +64,7 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 - [License](#license)
 
 ## Release
+- [2026/3/4] 🚀 Added **ONNX Runtime** and **TensorRT** inference backends for MOSS-Audio-Tokenizer, enabling high-performance deployment without PyTorch dependency. See `onnx/` and `trt/` directories for details.
 - [2026/2/12] 🌟 We released the technical report: **MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models**. Read the [paper](https://arxiv.org/abs/2602.10934).
 - [2026/2/10] 🎉 Released **MOSS-TTS Family**. Please refer to our [blog](https://mosi.cn/#models) for details; models and docs can be found in the [MOSS-TTS GitHub repository](https://github.com/OpenMOSS/MOSS-TTS).
 - [2026/2/9] 🔥 We released code and checkpoints of MOSS-Audio-Tokenizer. Check out the [GitHub repository](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer), [Hugging Face weights](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer), and [ModelScope weights](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer).
