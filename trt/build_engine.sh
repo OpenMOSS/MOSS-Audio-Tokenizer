@@ -15,13 +15,33 @@
 #   - pip install tensorrt cuda-python
 #
 # Usage:
-#   bash build_engine.sh <encoder.onnx> <decoder.onnx> <output_dir> [--fp8]
+#   bash build_engine.sh <encoder.onnx> <decoder.onnx> <output_dir> [additional trtexec flags...]
 #
-# Example:
+# Example (using tf32 - recommended):
 #   bash build_engine.sh \
 #       weights/MOSS-Audio-Tokenizer-ONNX/encoder.onnx \
 #       weights/MOSS-Audio-Tokenizer-ONNX/decoder.onnx \
 #       weights/MOSS-Audio-Tokenizer-TRT
+#
+# Example (using fp16):
+#   bash build_engine.sh \
+#       weights/MOSS-Audio-Tokenizer-ONNX/encoder.onnx \
+#       weights/MOSS-Audio-Tokenizer-ONNX/decoder.onnx \
+#       weights/MOSS-Audio-Tokenizer-TRT \
+#       --fp16
+#
+# ═══════════════════════════════════════════════════════════════════════════
+#  ⚠️  IMPORTANT: PRECISION AND TF32
+# ═══════════════════════════════════════════════════════════════════════════
+#
+#  By default, trtexec uses TF32 on Ampere and newer GPUs if no precision flag 
+#  (like --fp16, --bf16, --fp8, or --int8) is provided. 
+#
+#  We HIGHLY RECOMMEND using TF32 for the best balance of performance and 
+#  numerical stability for MOSS Audio Tokenizer. 
+#
+#  If you must use lower precision (e.g., --fp16), be aware that it may 
+#  lead to audio artifacts or decreased quality.
 #
 # ═══════════════════════════════════════════════════════════════════════════
 #  ⚠️  IMPORTANT: maxShapes AND MAXIMUM AUDIO LENGTH
@@ -89,12 +109,15 @@ OPT_SAMPLES=$(( ((OPT_SAMPLES + DOWNSAMPLE_RATE - 1) / DOWNSAMPLE_RATE) * DOWNSA
 OPT_FRAMES=$((OPT_SAMPLES / DOWNSAMPLE_RATE))
 
 if [ $# -lt 3 ]; then
-    echo "Usage: $0 <encoder.onnx> <decoder.onnx> <output_dir> [--fp8]"
+    echo "Usage: $0 <encoder.onnx> <decoder.onnx> <output_dir> [trtexec flags...]"
     echo ""
     echo "  encoder.onnx   Path to the encoder ONNX model"
     echo "  decoder.onnx   Path to the decoder ONNX model"
     echo "  output_dir     Directory to save .engine files"
-    echo "  --fp8          (optional) Use FP8 precision instead of FP16"
+    echo "  [flags...]     (optional) Any trtexec flags like --fp16, --fp8, --bf16, --int8, etc."
+    echo ""
+    echo "  Recommendation: Use TF32 (i.e., do NOT add any precision flags) for the"
+    echo "  best balance of performance and audio quality on Ampere+ GPUs."
     echo ""
     echo "Current MAX_AUDIO_SECONDS=${MAX_AUDIO_SECONDS} → max ${MAX_SAMPLES} samples / ${MAX_FRAMES} frames"
     echo "Edit MAX_AUDIO_SECONDS in this script to change the limit."
@@ -104,11 +127,8 @@ fi
 ENCODER_ONNX="$1"
 DECODER_ONNX="$2"
 OUTPUT_DIR="$3"
-PRECISION="--fp16"
-
-if [ "${4:-}" = "--fp8" ]; then
-    PRECISION="--fp8"
-fi
+shift 3
+EXTRA_FLAGS=("$@")
 
 mkdir -p "${OUTPUT_DIR}"
 
@@ -118,7 +138,7 @@ echo "════════════════════════�
 echo "  Max audio duration:  ${MAX_AUDIO_SECONDS} seconds"
 echo "  Encoder maxShapes:   input_values:1x1x${MAX_SAMPLES}"
 echo "  Decoder maxShapes:   audio_codes:32x1x${MAX_FRAMES}"
-echo "  Precision:           ${PRECISION}"
+echo "  Extra flags:         ${EXTRA_FLAGS[*]}"
 echo "═══════════════════════════════════════════════════════════════"
 echo ""
 
@@ -126,22 +146,20 @@ echo "[1/2] Building encoder engine..."
 trtexec \
     --onnx="${ENCODER_ONNX}" \
     --saveEngine="${OUTPUT_DIR}/encoder.engine" \
-    ${PRECISION} \
-    --minShapes=input_values:1x1x${DOWNSAMPLE_RATE},n_quantizers:1 \
-    --optShapes=input_values:1x1x${OPT_SAMPLES},n_quantizers:1 \
-    --maxShapes=input_values:1x1x${MAX_SAMPLES},n_quantizers:1 \
-    --workspace=4096
+    --minShapes=input_values:1x1x${DOWNSAMPLE_RATE} \
+    --optShapes=input_values:1x1x${OPT_SAMPLES} \
+    --maxShapes=input_values:1x1x${MAX_SAMPLES} \
+    "${EXTRA_FLAGS[@]}"
 
 echo ""
 echo "[2/2] Building decoder engine..."
 trtexec \
     --onnx="${DECODER_ONNX}" \
     --saveEngine="${OUTPUT_DIR}/decoder.engine" \
-    ${PRECISION} \
-    --minShapes=audio_codes:32x1x1,n_quantizers:1 \
-    --optShapes=audio_codes:32x1x${OPT_FRAMES},n_quantizers:1 \
-    --maxShapes=audio_codes:32x1x${MAX_FRAMES},n_quantizers:1 \
-    --workspace=4096
+    --minShapes=audio_codes:32x1x1 \
+    --optShapes=audio_codes:32x1x${OPT_FRAMES} \
+    --maxShapes=audio_codes:32x1x${MAX_FRAMES} \
+    "${EXTRA_FLAGS[@]}"
 
 echo ""
 echo "═══════════════════════════════════════════════════════════════"
