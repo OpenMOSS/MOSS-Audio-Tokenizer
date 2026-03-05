@@ -79,7 +79,7 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 | Model | Hugging Face | ModelScope |
 |:-----:|:---------------:|:----------:|
 | **MOSS-Audio-Tokenizer** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
-| **MOSS-Audio-Tokenizer(ONNX Runtime)** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-ONNX) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-ONN) |
+| **MOSS-Audio-Tokenizer(ONNX Runtime)** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-ONNX) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-ONNX) |
 
 
 ### MOSS-TTS Family
@@ -179,6 +179,8 @@ pip install onnxruntime-gpu librosa soundfile
 ### Usage
 
 ```python
+import sys
+sys.path.append(".")
 from pathlib import Path
 
 import librosa
@@ -207,7 +209,7 @@ reconstructed = model.decode(audio_codes, n_quantizers=32)
 sf.write("demo/demo_rec_onnx.wav", reconstructed, model.sample_rate)
 
 # Decode: only first 8 RVQ layers (lower bitrate)
-reconstructed_rvq8 = model.decode(audio_codes[:, :8], n_quantizers=8)
+reconstructed_rvq8 = model.decode(audio_codes, n_quantizers=8)
 sf.write("demo/demo_rec_onnx_rvq8.wav", reconstructed_rvq8, model.sample_rate)
 ```
 
