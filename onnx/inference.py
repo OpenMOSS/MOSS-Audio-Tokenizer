@@ -64,6 +64,7 @@ class OnnxAudioTokenizer:
         use_gpu: bool = True,
     ):
         self.n_quantizers = n_quantizers
+        self.sample_rate = SAMPLE_RATE
 
         encoder_path = Path(encoder_path)
         decoder_path = Path(decoder_path)
