@@ -66,6 +66,7 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 - [License](#license)
 
 ## Release
+- [2026/4/13] 🚀 Released **MOSS-Audio-Tokenizer-Nano**, an ultra-lightweight ~20M-parameter audio tokenizer with native **48kHz stereo** input and output. The model is available on [Hugging Face](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano). For more details, please refer to the [MOSS-TTS-Nano GitHub repository](https://github.com/OpenMOSS/MOSS-TTS-Nano).
 - [2026/3/4] 🚀 Added **ONNX Runtime** and **TensorRT** inference backends for MOSS-Audio-Tokenizer, enabling high-performance deployment without PyTorch dependency. See `onnx/` and `trt/` directories for details. We also provide conversion scripts (`onnx/export_onnx.py`) for community reference.
 - [2026/2/12] 🌟 We released the technical report: **MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models**. Read the [paper](https://arxiv.org/abs/2602.10934).
 - [2026/2/10] 🎉 Released **MOSS-TTS Family**. Please refer to our [blog](https://mosi.cn/#models) for details; models and docs can be found in the [MOSS-TTS GitHub repository](https://github.com/OpenMOSS/MOSS-TTS).
@@ -73,19 +74,21 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 
 ## Model List
 
-> For MOSS‑TTS Family models and docs, visit the GitHub repo: https://github.com/OpenMOSS/MOSS-TTS
+> For MOSS‑TTS Family models and docs, visit the GitHub repos: https://github.com/OpenMOSS/MOSS-TTS and https://github.com/OpenMOSS/MOSS-TTS-Nano
 
 ### MOSS-Audio-Tokenizer
-| Model | Hugging Face | ModelScope |
-|:-----:|:---------------:|:----------:|
-| **MOSS-Audio-Tokenizer** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
-| **MOSS-Audio-Tokenizer(ONNX Runtime)** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-ONNX) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-ONNX) |
+| Model | Sampling Rate | Channels | Hugging Face | ModelScope |
+|:-----:|:-------------:|:--------:|:------------:|:----------:|
+| **MOSS-Audio-Tokenizer** | 24kHz | 1 channel (mono) | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
+| **MOSS-Audio-Tokenizer (ONNX Runtime)** | 24kHz | 1 channel (mono) | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-ONNX) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-ONNX) |
+| **MOSS-Audio-Tokenizer-Nano** | 48kHz | 2 channels (stereo) | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-Nano) |
 
 
 ### MOSS-TTS Family
 | Model | Hugging Face | ModelScope |
 |:-----:|:---------------:|:----------:|
 | **MOSS-TTS** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTS) |
+| **MOSS-TTS-Nano** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/collections/OpenMOSS-Team/MOSS-TTS-Nano) |
 | **MOSS-TTS-Local-Transformer** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTS-Local-Transformer) |
 | **MOSS-TTSD** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTSD-v1.0) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTSD-v1.0) |
 | **MOSS-TTS-Realtime** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Realtime) | [![MS](https://img.shields.io/badge/ModelScope-Model-lightgrey?logo=modelscope)](https://modelscope.cn/models/openmoss/MOSS-TTS-Realtime) |
