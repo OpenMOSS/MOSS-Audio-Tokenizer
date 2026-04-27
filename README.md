@@ -66,6 +66,7 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 - [License](#license)
 
 ## Release
+- [2026/4/27] 📊 Released the evaluation results for **MOSS-Audio-Tokenizer-Nano**. For details, please see the [MOSS-TTS-Nano evaluation metrics](https://github.com/OpenMOSS/MOSS-TTS-Nano#evaluation-metrics).
 - [2026/4/13] 🚀 Released **MOSS-Audio-Tokenizer-Nano**, an ultra-lightweight ~20M-parameter audio tokenizer with native **48kHz stereo** input and output. The model is available on [Hugging Face](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano). For more details, please refer to the [MOSS-TTS-Nano GitHub repository](https://github.com/OpenMOSS/MOSS-TTS-Nano).
 - [2026/3/4] 🚀 Added **ONNX Runtime** and **TensorRT** inference backends for MOSS-Audio-Tokenizer, enabling high-performance deployment without PyTorch dependency. See `onnx/` and `trt/` directories for details. We also provide conversion scripts (`onnx/export_onnx.py`) for community reference.
 - [2026/2/12] 🌟 We released the technical report: **MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models**. Read the [paper](https://arxiv.org/abs/2602.10934).
