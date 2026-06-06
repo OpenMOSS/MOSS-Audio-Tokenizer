@@ -66,6 +66,7 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 - [License](#license)
 
 ## Release
+- [2026/6/7] 🚀 Released **MOSS-Audio-Tokenizer-v2**, the 48kHz stereo audio tokenizer used by the MOSS-TTS-Local-Transformer-v1.5 model. The model is available on [Hugging Face](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-v2), and [ModelScope](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-v2).
 - [2026/5/6] 🎉 Added **MLX Audio** support for **MOSS-TTS** and **MOSS-Audio-Tokenizer**. Visit the [MLX Audio GitHub repository](https://github.com/Blaizzy/mlx-audio) for details.
 - [2026/4/27] 📊 Released the evaluation results for **MOSS-Audio-Tokenizer-Nano**. For details, please see the [MOSS-TTS-Nano evaluation metrics](https://github.com/OpenMOSS/MOSS-TTS-Nano#evaluation-metrics).
 - [2026/4/13] 🚀 Released **MOSS-Audio-Tokenizer-Nano**, an ultra-lightweight ~20M-parameter audio tokenizer with native **48kHz stereo** input and output. The model is available on [Hugging Face](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano). For more details, please refer to the [MOSS-TTS-Nano GitHub repository](https://github.com/OpenMOSS/MOSS-TTS-Nano).
@@ -83,6 +84,7 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 |:-----:|:-------------:|:--------:|:------------:|:----------:|
 | **MOSS-Audio-Tokenizer** | 24kHz | 1 channel (mono) | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer) |
 | **MOSS-Audio-Tokenizer (ONNX Runtime)** | 24kHz | 1 channel (mono) | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-ONNX) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-ONNX) |
+| **MOSS-Audio-Tokenizer-v2** | 48kHz | 2 channels (stereo) | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-v2) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-v2) |
 | **MOSS-Audio-Tokenizer-Nano** | 48kHz | 2 channels (stereo) | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-Nano) |
 
 
@@ -90,12 +92,15 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 | Model | Hugging Face | ModelScope |
 |:-----:|:---------------:|:----------:|
 | **MOSS-TTS** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-TTS) |
+| **MOSS-TTS-v1.5** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-v1.5) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-TTS-v1.5) |
 | **MOSS-TTS-Nano** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/collections/OpenMOSS-Team/MOSS-TTS-Nano) |
 | **MOSS-TTS-Local-Transformer** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-TTS-Local-Transformer) |
+| **MOSS-TTS-Local-Transformer-v1.5** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-TTS-Local-Transformer-v1.5) |
 | **MOSS-TTSD** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTSD-v1.0) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-TTSD-v1.0) |
 | **MOSS-TTS-Realtime** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Realtime) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-TTS-Realtime) |
 | **MOSS-VoiceGenerator** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-VoiceGenerator) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-VoiceGenerator) |
 | **MOSS-SoundEffect** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-SoundEffect) |
+| **MOSS-SoundEffect-v2.0** | [![HF](https://img.shields.io/badge/HuggingFace-Model-orange?logo=huggingface)](https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0) | [![MS](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://modelscope.cn/models/openmoss/MOSS-SoundEffect-v2.0) |
 
 ## HuggingFace (PyTorch)
 
@@ -141,6 +146,38 @@ wav_rvq8 = dec_rvq8.audio.squeeze(0)
 torchaudio.save("demo/demo_rec_rvq8.wav", wav_rvq8, sample_rate=model.sampling_rate)
 ```
 
+#### MOSS-Audio-Tokenizer-v2 or MOSS-Audio-Tokenizer-Nano Reconstruction (48kHz Stereo)
+
+```python
+import torch
+from transformers import AutoModel
+import torchaudio
+
+repo_id = "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2"
+# repo_id = "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano"
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+model = AutoModel.from_pretrained(repo_id, trust_remote_code=True).to(device).eval()
+
+wav, sr = torchaudio.load("demo/demo_gt.wav")
+if sr != model.sampling_rate:
+    wav = torchaudio.functional.resample(wav, sr, model.sampling_rate)
+if wav.shape[0] == 1:
+    wav = wav.repeat(model.config.number_channels, 1)
+elif wav.shape[0] > model.config.number_channels:
+    wav = wav[: model.config.number_channels]
+
+input_length = wav.shape[-1]
+
+with torch.inference_mode():
+    enc = model.encode(wav.unsqueeze(0).to(device), return_dict=True)
+    dec = model.decode(enc.audio_codes, return_dict=True)
+
+audio = dec.audio[..., :input_length]
+torchaudio.save("demo/demo_rec_v2.wav", audio.squeeze(0).cpu(), sample_rate=model.sampling_rate)
+print(f"enc.audio_codes.shape: {enc.audio_codes.shape}")
+```
+
 #### Streaming
 
 `MossAudioTokenizerModel.encode` and `MossAudioTokenizerModel.decode` support simple streaming via a `chunk_duration` argument.
@@ -161,6 +198,23 @@ audio = torch.randn(1, 1, 3200)  # dummy waveform
 # 0.08s @ 24kHz = 1920 samples, divisible by downsample_rate=1920
 enc = model.encode(audio, return_dict=True, chunk_duration=0.08)
 dec = model.decode(enc.audio_codes, return_dict=True, chunk_duration=0.08)
+```
+
+For MOSS-Audio-Tokenizer-v2 or MOSS-Audio-Tokenizer-Nano, use 48kHz stereo input and output:
+
+```python
+import torch
+from transformers import AutoModel
+
+repo_id = "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2"
+# repo_id = "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano"
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model = AutoModel.from_pretrained(repo_id, trust_remote_code=True).to(device).eval()
+audio = torch.randn(1, 2, 48000 * 6, device=device)
+
+with torch.inference_mode():
+    enc = model.encode(audio, return_dict=True, chunk_duration=0.08)
+    dec = model.decode(enc.audio_codes, return_dict=True, chunk_duration=0.08)
 ```
 
 ## ONNX Runtime
@@ -224,6 +278,15 @@ sf.write("demo/demo_rec_onnx_rvq8.wav", reconstructed_rvq8, model.sample_rate)
 ```python
 from transformers import AutoModel
 model = AutoModel.from_pretrained("OpenMOSS-Team/MOSS-Audio-Tokenizer", trust_remote_code=True).eval()
+```
+
+For the 48kHz stereo tokenizer MOSS-Audio-Tokenizer-v2 and MOSS-Audio-Tokenizer-Nano:
+
+```python
+from transformers import AutoModel
+repo_id = "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2"
+# repo_id = "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano"
+model = AutoModel.from_pretrained(repo_id, trust_remote_code=True).eval()
 ```
 
 ### Testing Model
