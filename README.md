@@ -66,6 +66,7 @@ This repository is the official implementation of MOSS-Audio-Tokenizer.
 - [License](#license)
 
 ## Release
+- [2026/6/16] 📊 Released **MOSS-Audio-Tokenizer-Eval**, an objective reconstruction evaluation toolkit for audio tokenizers, neural codecs, audio VAEs, and vocoders. It supports MOSS-Audio-Tokenizer, MOSS-Audio-Tokenizer-v2, and MOSS-Audio-Tokenizer-Nano evaluation with configurable RVQ layers and standard reconstruction metrics. See the [MOSS-Audio-Tokenizer-Eval GitHub repository](https://github.com/OpenMOSS/MOSS-Audio-Tokenizer-Eval.git) for details.
 - [2026/6/7] 🚀 Released **MOSS-Audio-Tokenizer-v2**, the 48kHz stereo audio tokenizer used by the MOSS-TTS-Local-Transformer-v1.5 model. The model is available on [Hugging Face](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-v2), and [ModelScope](https://modelscope.cn/models/openmoss/MOSS-Audio-Tokenizer-v2).
 - [2026/5/6] 🎉 Added **MLX Audio** support for **MOSS-TTS** and **MOSS-Audio-Tokenizer**. Visit the [MLX Audio GitHub repository](https://github.com/Blaizzy/mlx-audio) for details.
 - [2026/4/27] 📊 Released the evaluation results for **MOSS-Audio-Tokenizer-Nano**. For details, please see the [MOSS-TTS-Nano evaluation metrics](https://github.com/OpenMOSS/MOSS-TTS-Nano#evaluation-metrics).
